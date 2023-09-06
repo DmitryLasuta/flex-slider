@@ -1,0 +1,8 @@
+@mixin setBgImages($images) {
+	@for $i from 1 through length($images) {
+		&:nth-child(#{$i}) {
+			$image: nth($images, $i);
+			background: url('../assets/#{$image}') no-repeat center center / cover;
+		}
+	}
+}

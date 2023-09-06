@@ -1,0 +1,23 @@
+@import './variables';
+@import './config';
+@import './setImages';
+
+.slider {
+	border: 1px solid black;
+	display: flex;
+	.slide {
+		min-height: 650px;
+		flex: 1;
+		transition: flex-grow 0.8s ease-in-out, filter 0.5s ease-in;
+
+		@include setBgImages($images);
+
+		&.active {
+			flex-grow: 6;
+		}
+
+		&:not(.active) {
+			filter: $non-active-slides-filters;
+		}
+	}
+}
