@@ -1,17 +1,17 @@
 {
-	"name": "flex-slider",
-	"private": true,
-	"version": "0.0.0",
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "vite build",
-		"preview": "vite preview"
-	},
-	"devDependencies": {
-		"autoprefixer": "^10.4.15",
-		"sass": "^1.66.1",
-		"vite": "^4.4.5",
-		"vite-plugin-html-minifier": "^1.0.3"
-	}
+  "name": "flex-slider",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "sass": "^1.66.1",
+    "vite": "^4.4.5",
+    "vite-plugin-html-minifier": "^1.0.3"
+  }
 }
