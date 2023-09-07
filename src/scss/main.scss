@@ -8,7 +8,7 @@
 	.slide {
 		min-height: 650px;
 		flex: 1;
-		transition: flex-grow 0.8s ease-in-out, filter 0.5s ease-in;
+		transition: flex-grow 1s ease-in-out, filter 0.5s ease-in;
 
 		@include setBgImages($images);
 
