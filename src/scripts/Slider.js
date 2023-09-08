@@ -67,10 +67,10 @@ export default class Slider {
   }
 
   startSlideshow(interval = 2500) {
-    this.#autoPlayInterval = setInterval(this.#nextSlide.bind(this), interval)
+    this.#autoPlayInterval = setInterval(() => this.#nextSlide(), interval)
   }
 
   stopSlideshow() {
-    clearInterval(this.#autoPlayInterval)
+    if (this.#autoPlayInterval) clearInterval(this.#autoPlayInterval)
   }
 }
