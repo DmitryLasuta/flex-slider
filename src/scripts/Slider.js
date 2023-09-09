@@ -58,6 +58,7 @@ export default class Slider {
   }
 
   startSlideshow(interval = 2500) {
+    if (this.#autoPlayInterval) clearInterval(this.#autoPlayInterval)
     this.#autoPlayInterval = setInterval(() => this.#nextSlide(), interval)
   }
 
