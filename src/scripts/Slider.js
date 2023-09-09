@@ -1,4 +1,4 @@
-import SELECTORS from './selectors'
+import { SELECTORS, setSlideActiveClass, getActiveSlideIndex } from './services'
 
 export default class Slider {
   #sliderPanel = null
@@ -23,27 +23,18 @@ export default class Slider {
     }
 
     this.#sliderPanel.addEventListener('mouseleave', () => {
-      const activeSlideIndex = Array.from(this.#slideNodes).findIndex(slide =>
-        slide.classList.contains(SELECTORS.ACTIVE_CLASS_NAME)
-      )
-      this.#activeSlideIndex = activeSlideIndex
+      this.#activeSlideIndex = getActiveSlideIndex(this.slideNodes)
       this.startSlideshow()
     })
 
     this.#slideNodes.forEach(slide => {
-      slide.addEventListener('mouseenter', () => {
+      slide.addEventListener('mouseenter', event => {
         this.stopSlideshow()
-        this.slideNodes.forEach(slide =>
-          slide.classList.remove(SELECTORS.ACTIVE_CLASS_NAME)
-        )
-        slide.classList.add(SELECTORS.ACTIVE_CLASS_NAME)
+        setSlideActiveClass(event, this.slideNodes)
       })
 
-      slide.addEventListener('mouseleave', () => {
-        this.slideNodes.forEach(slide =>
-          slide.classList.remove(SELECTORS.ACTIVE_CLASS_NAME)
-        )
-        slide.classList.add(SELECTORS.ACTIVE_CLASS_NAME)
+      slide.addEventListener('mouseleave', event => {
+        setSlideActiveClass(event, this.slideNodes)
       })
     })
   }
