@@ -58,4 +58,3 @@ Adding a pause in slide transitions when the cursor is hovered over.
 Customizing various parameters, such as slide transition speed and animation effects.
 This project has allowed me to practice creating and using JavaScript classes. Using classes helps organize code, making it more modular and easily maintainable.
 
-[demo](https://dmitrylasuta.github.io/flex-slider/)
